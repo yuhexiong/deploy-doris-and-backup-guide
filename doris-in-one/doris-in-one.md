@@ -1,10 +1,11 @@
-# One Frontend And One Backend In One VM
+# One Frontend, One Backend And One Broker In One VM
 
 Document refer to [BoldBI](https://support.boldbi.com/kb/article/14891/install-and-configure-apache-doris-in-ubuntu-environment)  
 
 ## Overview
 
 - Virtual Machine: Ubuntu v22.04.4
+- Platform: JDK 11
 - Database: Doris v2.0.12
 
 ## Switch To Root User
