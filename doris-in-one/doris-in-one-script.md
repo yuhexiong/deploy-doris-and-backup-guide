@@ -1,4 +1,4 @@
-# One Frontend, One Backend And One Broker In One VM
+# One Frontend, One Backend And One Broker In One VM - Script
 
 Document refer to [BoldBI](https://support.boldbi.com/kb/article/14891/install-and-configure-apache-doris-in-ubuntu-environment)  
 
