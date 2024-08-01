@@ -6,6 +6,11 @@
 - Platform: JDK 11
 - Database: Doris v2.0.12
 
+### Architecture
+
+vm: 1 FE, 1 BE, 1 BROKER  
+mount at **/mnt/doris**  
+
 ## Switch To Root User
 ```
 sudo su -

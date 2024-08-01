@@ -1,0 +1,84 @@
+services:
+  doris-fe-01:
+    restart: always
+    image: "doris-fe"
+    container_name: "doris-fe-01"
+    hostname: "doris-fe-01"
+    environment:
+      - FE_SERVERS=fe1:10.1.1.100:9010,fe2:10.1.1.200:9010
+      - FE_ID=1
+    volumes:
+      - /mnt/doris/doris-meta:/opt/apache-doris/fe/doris-meta
+      - /mnt/doris/log:/opt/apache-doris/fe/log
+      - ./fe.conf:/opt/apache-doris/fe/conf/fe.conf
+    network_mode: host
+
+  doris-fe-02:
+    restart: always
+    image: "doris-fe"
+    container_name: "doris-fe-02"
+    hostname: "doris-fe-02"
+    environment:
+      - FE_SERVERS=fe1:10.1.1.100:9010,fe2:10.1.1.200:9010
+      - FE_ID=2
+    volumes:
+      - /mnt/doris/doris-meta:/opt/apache-doris/fe/doris-meta
+      - /mnt/doris/log:/opt/apache-doris/fe/log
+    network_mode: host
+
+  doris-be-01:
+    restart: always
+    image: "doris-be"
+    container_name: "doris-be-01"
+    hostname: "doris-be-01"
+    environment:
+      - FE_SERVERS=fe1:10.1.1.100:9010,fe2:10.1.1.200:9010
+      - BE_ADDR=10.1.1.100:9050
+    volumes:
+      - /mnt/doris/storage:/opt/apache-doris/be/storage
+      - /mnt/doris/script:/docker-entrypoint-initdb.d
+      - /mnt/doris/log:/opt/apache-doris/be/log
+      - ./be.conf:/opt/apache-doris/be/conf/be.conf
+    network_mode: host
+
+  doris-be-02:
+    restart: always
+    image: "doris-be"
+    container_name: "doris-be-02"
+    hostname: "doris-be-02"
+    environment:
+      - FE_SERVERS=fe1:10.1.1.100:9010,fe2:10.1.1.200:9010
+      - BE_ADDR=10.1.1.200:9050
+    volumes:
+      - /mnt/doris/storage:/opt/apache-doris/be/storage
+      - /mnt/doris/script:/docker-entrypoint-initdb.d
+      - /mnt/doris/log:/opt/apache-doris/be/log
+      - ./be.conf:/opt/apache-doris/be/conf/be.conf
+    network_mode: host
+
+  doris-be-03:
+    restart: always
+    image: "doris-be"
+    container_name: "doris-be-03"
+    hostname: "doris-be-03"
+    environment:
+      - FE_SERVERS=fe1:10.1.1.100:9010,fe2:10.1.1.200:9010
+      - BE_ADDR=10.1.1.300:9050
+    volumes:
+      - /mnt/doris/storage:/opt/apache-doris/be/storage
+      - /mnt/doris/script:/docker-entrypoint-initdb.d
+      - /mnt/doris/log:/opt/apache-doris/be/log
+      - ./be.conf:/opt/apache-doris/be/conf/be.conf
+    network_mode: host
+
+  doris-broker-01:
+    restart: always
+    image: "doris-broker"
+    container_name: "doris-broker-01"
+    hostname: "doris-broker-01"
+    environment:
+      - FE_SERVERS=fe1:10.1.1.100:9010,fe2:10.1.1.200:9010
+      - BROKER_ADDR=bo1:10.1.1.300:8000
+    volumes:
+      - ./hdfs-site.xml:/opt/apache-doris/broker/conf/hdfs-site.xml
+    network_mode: host

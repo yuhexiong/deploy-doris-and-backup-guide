@@ -22,3 +22,4 @@ Guide for deploying Apache Doris in one/three vitrual machines by script or dock
 
 ### Docker Compose
 - one frontend, one backend and one broker in one vm (refer to [doris-in-one-docker.md](./doris-in-one/doris-in-one-docker.md))
+- two frontends, three backends and one broker in three vms (refer to [doris-multiple-docker.md](./doris-multiple/doris-multiple-docker.md))  
