@@ -121,7 +121,6 @@ sudo ufw allow 9060/tcp
 sudo ufw allow 8040/tcp
 sudo ufw allow 9050/tcp
 sudo ufw allow 8060/tcp
-sudo ufw allow 8060/tcp
 ```
 
 start
