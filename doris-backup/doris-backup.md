@@ -2,6 +2,8 @@
 
 Backup table from Doris-01 to Doris-02.  
 
+![image](./backup.png)
+
 ## Backup(Doris-01)
 
 mySQL command line interface in doris frontend 9030  

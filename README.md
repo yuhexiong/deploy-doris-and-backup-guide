@@ -26,4 +26,4 @@ Guide for deploying Apache Doris in one/three vitrual machines by script or dock
 
 
 ## Backup
-- backup from 1 doris and restore to another (refer to [doris-backup.md](./doris-backup.md))  
+- backup from 1 doris and restore to another (refer to [doris-backup.md](./doris-backup/doris-backup.md))  
