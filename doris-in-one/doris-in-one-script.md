@@ -196,7 +196,7 @@ SHOW BROKER;
 
 expected results are as follows  
 ```
-Name  |Host         |Port|Alive|LastStartTime      |LastUpdateTime     |ErrMsg                                                              |
+Name            |Host         |Port|Alive|LastStartTime      |LastUpdateTime     |ErrMsg                                                              |
 ----------------+-------------+----+-----+-------------------+-------------------+--------------------------------------------------------------------+
 {BROKER_NAME}   |127.0.0.1    |8000|true |2024-07-10 08:18:12|2024-07-16 03:27:39|                                                                    |
 ```
