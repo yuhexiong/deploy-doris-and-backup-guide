@@ -8,6 +8,11 @@ Backup table from Doris-01 to Doris-02.
 
 mySQL command line interface in doris frontend 9030  
 
+use database before all command line.  
+```
+use {DATABASE_NAME};
+```
+
 ### Register Broker
 
 use docker compose or sql  
