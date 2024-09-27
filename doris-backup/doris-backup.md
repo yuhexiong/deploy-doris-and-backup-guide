@@ -37,7 +37,6 @@ PROPERTIES
    "username" = "hadoop_admin",
    "password" = "hadoop_admin_password"
 );
-
 ```
 
 check repository
@@ -126,7 +125,6 @@ PROPERTIES
     "replication_num" = "1",
     "reserve_dynamic_partition_enable"="true"
 );
-
 ```
 
 check restore
